@@ -1,0 +1,26 @@
+input{
+    display: block;
+    width: 250px;
+    margin: 10px 0 ;
+}
+button{
+    display: block;
+    width: 100px;
+}
+.li{
+    background: #dddd;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.btnX{
+    position: absolute;
+    left: 87px;
+    width: 24px;
+    top: 18px;
+
+}
+li{
+    position: relative;
+}

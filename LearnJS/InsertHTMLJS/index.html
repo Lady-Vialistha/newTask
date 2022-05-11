@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert HTML dan JS</title>
+    <script src="../../jquery.js"></script>
+</head>
+<body>
+    <!-- RADIO -->
+    <form action="" id="form">
+        <label htmlFor="">Nama :</label>
+        <input type="text" />
+        <br />
+        <label htmlFor="">Umur :</label>
+        <input type="number" />
+        <br />
+        <label htmlFor="">Jenis :</label>
+        <input type="radio" value="pria" onclick="fungsiRadio(this.value)" name="jenis"/>pria
+        <input type="radio" value="wanita" onclick="fungsiRadio(this.value)" name="jenis"/>wanita
+    </form>
+    <button onclick="fungsiButton(this.value)" id="button">Result</button>
+    <div id="result"></div>
+
+    <!-- KUADRAT -->
+    <!-- <form id="form">
+        <label for="">masukkan angka</label>
+        <input type="text">
+        <br>
+    </form>
+    <button onclick="fungsiButton(this.value)">Result</button>
+    <p id="result"></p> -->
+
+    <!-- KARAKTER -->
+    <!-- <form action="" id="form">
+        <label for="">ketik kalimat</label>
+        <input type="text" onchange="inputValue(this.value)">
+        <label for="">karakter yg dicari</label>
+        <input type="text" onchange="inputValue2(this.value)">
+    </form>
+    <button onclick="buttonResult()">result</button> -->
+
+    <script src="./index.js"></script>
+</body>
+</html>
