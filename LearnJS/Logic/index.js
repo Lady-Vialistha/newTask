@@ -13,16 +13,16 @@
 // }
 
 // GANJIL GENAP
-// var input = prompt("Masukkan angka");
-// if (input % 2 == 0) {
-//     console.log(input + " termasuk genap");
-// } else {
-//     console.log(input + " termasuk ganjil");
-// }
+var input = prompt("Masukkan angka");
+if (input % 2 == 0) {
+    console.log(input + " termasuk genap");
+} else {
+    console.log(input + " termasuk ganjil");
+}
 
 // DATE
-let tanggal = new Date();
-document.getElementById("text").innerHTML = tanggal;
+// let tanggal = new Date();
+// document.getElementById("text").innerHTML = tanggal;
 
 // BERAT BADAN
 // var m = prompt("tinggi");

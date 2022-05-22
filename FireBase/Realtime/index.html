@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realtime Database</title>
+</head>
+<style>
+     body{
+        font-size: 15px;
+        font-weight: 300;
+    }
+    #Name{
+        width: 250px;
+        padding: 5px;
+        margin: 10px 20px;
+    }
+    
+    #Id{
+        width: 250px;
+        padding: 5px;
+        margin: 10px 38px;
+    }
+    #inputGender{
+        width: 250px;
+        padding: 5px;
+        margin: 10px 38px;
+    }
+     #Update,#Submit, #Delete{
+        padding: 6px 34px;
+        margin: 0 4px;
+    }
+    #Get{
+        padding: 6px 43px;
+        margin: 0 4px;
+    }
+    .allButton{
+        margin: 10px 82px;
+    }
+</style>
+<body>
+    <form>
+        <div>
+            <label for=""> ID :</label>
+            <input type="text" id="Id">
+        </div>
+        <div>
+            <label>Name : </label>
+            <input type="text" id="Name">
+        </div>
+       <div>
+        <select id="Gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <input type="text" id="inputGender">
+       </div>
+       
+        <div class="allButton">
+            <input type="submit" value="Submit" id="Submit">
+            <input type="button" value="Get" id="Get">
+        </div>
+        <div class="allButton">
+            <input type="button" value="Update" id="Update">
+            <input type="button" value="Delete" id="Delete">
+        </div>
+    </form>
+
+    <ul id="list"></ul>
+    
+    <script src="./index.js" type="module"></script>
+</body>
+</html>

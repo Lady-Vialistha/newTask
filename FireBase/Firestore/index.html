@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>To Do List Firebase </title>
+</head>
+
+<style>
+    body{
+        font-size: 15px;
+        font-weight: 300;
+    }
+    #Name{
+        width: 250px;
+        padding: 5px;
+        margin: 10px 20px;
+    }
+    
+    #Id{
+        width: 250px;
+        padding: 5px;
+        margin: 10px 38px;
+    }
+    #update,#submit, #delete{
+        padding: 6px 34px;
+        margin: 0 4px;
+    }
+    #get{
+        padding: 6px 43px;
+        margin: 0 4px;
+    }
+    .allButton{
+        margin: 10px 82px;
+    }
+    .list{
+        font-size: 0px;
+    }
+    .list-item{
+        font-size: 14px;
+    }
+</style>
+<body>
+    <!-- Vanilla Javascript -->
+    <!-- Realtime Databse -->
+    <h3>To Do List Firestore version 9</h3>
+    <form>
+       <div>
+            <label>ID :</label>
+            <input type="text" id="Id">
+       </div>
+       <div>
+            <label>Nama :</label>
+            <input type="text" id="Name"/>
+       </div>
+       <div class="allButton">
+            <input id="submit" type="submit" value="submit"/>
+            <input id="get" type="button" value="get"/>
+       </div>
+       <div class="allButton">
+            <input id="update" type="button" value="update"/>
+            <input id="delete" type="button" value="delete"/>
+       </div>
+    </form>
+    <ul id="list" class="list">
+        
+    </ul>
+    
+    
+
+   <script src="./index.js" type="module"></script>
+</body>
+</html>
