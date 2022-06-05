@@ -76,58 +76,90 @@ async function addDataCostum(e) {
 
 // GETTING DATA
 
-async function getDataList(e) {
-    e.preventDefault();
-    var ref = doc(db, "TheList", inputId.value);
-    const docSnap = await getDoc(ref);
-    if (docSnap.exists()) {
-        inputName.value = docSnap.data().nameOfName;
-    } else {
-        alert("No Data");
-        inputId.value = "";
-        inputName.value = "";
-    }
-}
+// async function getDataList(e) {
+//     e.preventDefault();
+//     var ref = doc(db, "TheList", inputId.value);
+//     const docSnap = await getDoc(ref);
+//     if (docSnap.exists()) {
+//         inputName.value = docSnap.data().nameOfName;
+//     } else {
+//         alert("No Data");
+//         inputId.value = "";
+//         inputName.value = "";
+//     }
+// }
 
 // UPDATE DATA
 
-async function updateDataList(e) {
-    e.preventDefault();
-    var ref = doc(db, "TheList", inputId.value);
-    await updateDoc(ref, {
-        nameOfName: inputName.value,
-        nameOfID: inputId.value,
-    })
-        .then(() => {
-            alert("berhasil");
-            inputId.value = "";
-            inputName.value = "";
-        })
-        .catch((error) => {
-            alert("error" + error);
-        });
-}
+// async function updateDataList(e) {
+//     e.preventDefault();
+//     var ref = doc(db, "TheList", inputId.value);
+//     await updateDoc(ref, {
+//         nameOfName: inputName.value,
+//         nameOfID: inputId.value,
+//     })
+//         .then(() => {
+//             alert("berhasil");
+//             inputId.value = "";
+//             inputName.value = "";
+//         })
+//         .catch((error) => {
+//             alert("error" + error);
+//         });
+// }
 
 // DELETE DATA
 
-async function deleteDataList(e) {
-    e.preventDefault();
-    var ref = doc(db, "TheList", inputId.value);
-    const docSnap = await getDoc(ref);
-    if (!docSnap.exists()) {
-        alert("data does not exist");
-    }
-    await deleteDoc(ref)
-        .then(() => {
-            alert("berhasil");
-            inputId.value = "";
-            inputName.value = "";
-        })
-        .catch((error) => {
-            alert("error" + error);
-        });
-}
+// async function deleteDataList(e) {
+//     e.preventDefault();
+//     var ref = doc(db, "TheList", inputId.value);
+//     const docSnap = await getDoc(ref);
+//     if (!docSnap.exists()) {
+//         alert("data does not exist");
+//     }
+//     await deleteDoc(ref)
+//         .then(() => {
+//             alert("berhasil");
+//             inputId.value = "";
+//             inputName.value = "";
+//         })
+//         .catch((error) => {
+//             alert("error" + error);
+//         });
+// }
+
+// var arr = [];
+// var docRef = collection(db, "TheList");
+// var getRef = getDoc(docRef);
+// async function handleSubmit(e) {
+//     e.preventDefault();
+//     if (inputId !== "") {
+//         await addDoc(
+//             collection(db, "TheList", inputId.value),
+//             await setDoc({
+//                 nameOfID: inputId,
+//                 nameOfName: inputName,
+//             })
+//         )
+//             .then(() => {
+//                 alert("Add data successfully!");
+//                 let value = (inputName.value = getRef.data().nameOfName);
+//                 arr.push(value);
+//                 let createHtml = arr.map((item) => {
+//                     return `<li>${item}</li>`;
+//                 });
+//                 document.getElementById("list").innerHTML = createHtml;
+//                 inputId.value = "";
+//                 inputName.value = "";
+//             })
+//             .catch((e) => {
+//                 alert("You got an error!", e);
+//             });
+//     } else {
+//         alert("Empty data!");
+//     }
+// }
 buttonSubmit.addEventListener("click", addDataCostum);
-buttonGet.addEventListener("click", getDataList);
-buttonUpdate.addEventListener("click", updateDataList);
-buttonDelete.addEventListener("click", deleteDataList);
+// buttonGet.addEventListener("click", getDataList);
+// buttonUpdate.addEventListener("click", updateDataList);
+// buttonDelete.addEventListener("click", deleteDataList);
